@@ -3,8 +3,10 @@ on: [push]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
-      steps:
-       run: mkdir build
-       run: cd build
-       run: cmake ..
-       run: make 
+    steps:
+      - name : "create and enter build dir"
+        run: mkdir build;cd build
+      - name : "run cmake "
+        run: cmake ..
+      - name : "run make " 
+        run: make 
