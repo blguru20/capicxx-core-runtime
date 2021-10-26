@@ -3,7 +3,8 @@ on: [push]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
-    - run: mkdir build
-    - run: cd build
-    - run: cmake ..
-    - run: make 
+     steps:
+       run: mkdir build
+       run: cd build
+       run: cmake ..
+       run: make 
