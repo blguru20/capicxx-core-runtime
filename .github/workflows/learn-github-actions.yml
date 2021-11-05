@@ -6,11 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name : "create and enter build dir"
-        run: |
-          mkdir build
-          cd build
-      - name : "run cmake "
-        run: cmake ..
-      - name : "run make " 
-        run: make 
+      - name : "Create build directory and run CMake"
+        run: cmake -S . -B build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+      - name : "Build Project" 
+        run: cmake --build cmake_build_dir --target all --config Release -- -j4 
