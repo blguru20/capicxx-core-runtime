@@ -2,7 +2,6 @@ from conans import ConanFile, CMake
 
 class CapiCoreConan(ConanFile):
    settings = "os", "compiler", "build_type", "arch"
-   requires = ""
    generators = "cmake", "gcc", "txt"
 
    def configure_cmake(self): 
