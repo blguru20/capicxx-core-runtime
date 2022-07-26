@@ -4,7 +4,10 @@ class CapiCoreConan(ConanFile):
    settings = "os", "compiler", "build_type", "arch"
    requires = ""
    generators = "cmake", "gcc", "txt"
-   default_options = {-DCMAKE_INSTALL_PREFIX=/usr/local }
+
+   def configure_cmake(self): 
+      cmake = CMake(self)
+      cmake.definitions['CMAKE_INSTALL_PREFIX'] = '_artifacts'
 
    def imports(self):
       pass
