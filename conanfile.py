@@ -17,5 +17,5 @@ class CapiCoreConan(ConanFile):
       cmake.build()
       
    def package(self):
-      
+      cmake = CMake(self)
       cmake.install()
