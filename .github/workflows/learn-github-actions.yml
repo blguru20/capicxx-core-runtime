@@ -17,3 +17,5 @@ jobs:
       
       - name: Install dependencies
         run: conan install . --install-folder=${{github.workspace}}/build
+      - name: Build using conan
+        run: (cd build && conan build ../conanfile.py && cd ..) 
