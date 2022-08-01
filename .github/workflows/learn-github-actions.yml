@@ -27,5 +27,5 @@ jobs:
         # Artifact name
          name: libCommonAPI.so.3.2.0
          # A file, directory or wildcard pattern that describes what to upload
-         path: _package
+         path: build
 
