@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v3.1.0
         with:
         # Artifact name
-         name: libCommonAPI.so
+         name: libCommonAPI.so.3.2.0
          # A file, directory or wildcard pattern that describes what to upload
          path: _package
 
