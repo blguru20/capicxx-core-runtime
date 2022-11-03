@@ -21,6 +21,12 @@ jobs:
         run: (cd build && conan build ../conanfile.py && cd ..) 
       - name: Package conan 
         run: conan package . --build-folder=build --package-folder=_package
+      - name: Create a Release
+        uses: elgohr/Github-Release-Action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        with:
+         title: MyReleaseMessage
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.0
         with:
@@ -28,4 +34,3 @@ jobs:
          name: libCommonAPI.so.3.2.0
          # A file, directory or wildcard pattern that describes what to upload
          path: build
-
