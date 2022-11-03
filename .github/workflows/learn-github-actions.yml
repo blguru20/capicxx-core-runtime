@@ -23,8 +23,6 @@ jobs:
         run: conan package . --build-folder=build --package-folder=_package
       - name: Create a Release
         uses: elgohr/Github-Release-Action@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
          title: MyReleaseMessage
       - name: Upload a Build Artifact
