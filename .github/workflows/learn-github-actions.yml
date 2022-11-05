@@ -37,3 +37,7 @@ jobs:
             - Second Change
           draft: false
           prerelease: false
+      - name: Check build folder 
+         echo "contents of build folder  "
+         ls ${{github.workspace}}/build
+     
