@@ -22,6 +22,6 @@ jobs:
 
       
       - name: Check build folder 
-        run: echo "contents of workspace folder  "|  ls ${{github.workspace}}
+        run: echo "contents of build folder  "|  ls ${{github.workspace}}/build
         
      
