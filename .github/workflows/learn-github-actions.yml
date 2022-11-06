@@ -20,7 +20,7 @@ jobs:
       - name: Build using conan
         run: (cd build && conan build ../conanfile.py && cd ..) 
       - name: copy built artifacts to a safe folder 
-        run: mkdir _bin | cp build/lib* _bin | echo "_bin contains" | ls _bin
+        run: mkdir _bin && cp build/lib* _bin && echo "_bin contains" && ls _bin
       - name: Step 3 - Use the Upload Artifact GitHub Action
         uses: actions/upload-artifact@v2
         with: 
